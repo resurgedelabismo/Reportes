@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,304 +153,270 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-OSCAR_IVAN_FLORES</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-13</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-030</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-30</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-029</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-08</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-028</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-25</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-027</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-12</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-026</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-025</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-13</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-024</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-26</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-023</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-022</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-021</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-020</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-019</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-018</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-28</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-017</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-02</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-27</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-12</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-25</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-09-27</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-09-14</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-29</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-29</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-13</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-oscarivanflores-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-16</p>
-                <p><b>Total:</b> $3000.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-032</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-13</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-031</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-30</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-030</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-08</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-029</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-25</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-028</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-12</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-027</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-026</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-13</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-025</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-26</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-024</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-023</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-022</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-021</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-020</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-019</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-28</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-018</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-02</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-27</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-12</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-25</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-09-27</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-09-14</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-29</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-29</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-13</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Oscar Ivan Flores-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-16</p>
+                    <p><b>Total:</b> $3000.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -445,11 +425,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

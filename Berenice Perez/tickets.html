@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,79 +153,70 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-BERENICE_PEREZ</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-16</p>
-                <p><b>Total:</b> $425.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-03</p>
-                <p><b>Total:</b> $1363.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-28</p>
-                <p><b>Total:</b> $1500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-26 21:40:57</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-29</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-15</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-bereniceperez-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-08</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Berenice Perez-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-16</p>
+                    <p><b>Total:</b> $425.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-03</p>
+                    <p><b>Total:</b> $1363.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-28</p>
+                    <p><b>Total:</b> $1500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-26 21:40:57</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-29</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-15</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Berenice Perez-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-08</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -220,11 +225,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

@@ -49,6 +49,19 @@
                 text-align:center; margin:1rem 0;
                 color:#4a90ff;
             }
+
+            .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-bottom:0.5rem;
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                    0%, 100% { opacity:0.3; }
+                    50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
@@ -130,59 +143,70 @@
 
         <h2>Notas</h2>
         <div class="progress-container"><div class="progress-bar" id="progress"></div></div>
-
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
         <div class="scroll-horizontal" id="carousel">
         
-            <div class="card">
-                <h3>Nota VEN-juliomundo-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-21</p>
-                <p><b>Artículo:</b> ART-phantomluna2-nike-negro-28-000</p>
-                <p><b>Precio:</b> $1900.00</p>
-            </div>
-        
-            <div class="card">
-                <h3>Nota VEN-juliomundo-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-24</p>
-                <p><b>Artículo:</b> ART-sambaog-adidas-blanco-27-000</p>
-                <p><b>Precio:</b> $2300.00</p>
-            </div>
-        
-            <div class="card">
-                <h3>Nota VEN-juliomundo-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-05</p>
-                <p><b>Artículo:</b> ART-iphone12-apple-gris-promax-000</p>
-                <p><b>Precio:</b> $10000.00</p>
-            </div>
-        
-            <div class="card">
-                <h3>Nota VEN-juliomundo-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-05-22</p>
-                <p><b>Artículo:</b> ART-forumlowcl-adidas-rojo-27-000</p>
-                <p><b>Precio:</b> $2100.00</p>
-            </div>
-        
-        </div>
+                <div class="card">
+                    <h3>Nota Julio Mundo-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-21</p>
+                    <p><b>Artículo:</b> ART-phantomluna2-nike-negro-28-000</p>
+                    <p><b>Precio:</b> $1900.00</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Nota Julio Mundo-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-24</p>
+                    <p><b>Artículo:</b> ART-sambaog-adidas-blanco-27-000</p>
+                    <p><b>Precio:</b> $2300.00</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Nota Julio Mundo-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-05</p>
+                    <p><b>Artículo:</b> ART-iphone12-apple-gris-promax-000</p>
+                    <p><b>Precio:</b> $10000.00</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Nota Julio Mundo-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-05-22</p>
+                    <p><b>Artículo:</b> ART-forumlowcl-adidas-rojo-27-000</p>
+                    <p><b>Precio:</b> $2100.00</p>
+                </div>
+            
+                </div>
 
-        <footer>
-            <p>© Resurge | Donde los sueños renacen</p>
-        </footer>
+                <footer>
+                    <p>© Resurge | Donde los sueños renacen</p>
+                </footer>
 
-        <script>
-        const carousel = document.getElementById('carousel');
-        const progress = document.getElementById('progress');
+                <script>
+                const carousel = document.getElementById('carousel');
+                const progress = document.getElementById('progress');
+                const hint = document.getElementById('scrollHint');
 
-        carousel.addEventListener('scroll', () => {
-        const scrollLeft = carousel.scrollLeft;
-        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        const scrolled = (scrollLeft / scrollWidth) * 100;
-        progress.style.width = scrolled + '%';
-        });
-        </script>
+                // Mostrar/ocultar hint solo si hay scroll horizontal
+                function checkScroll() {
+                    if (carousel.scrollWidth > carousel.clientWidth) {
+                        hint.style.display = 'block';
+                    } else {
+                        hint.style.display = 'none';
+                    }
+                }
+                checkScroll();
 
-        </body>
-        </html>
-        
+                carousel.addEventListener('scroll', () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                    const scrolled = (scrollLeft / scrollWidth) * 100;
+                    progress.style.width = scrolled + '%';
+                });
+                </script>
+
+                </body>
+                </html>
+                

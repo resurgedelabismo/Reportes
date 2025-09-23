@@ -49,6 +49,18 @@
                 text-align:center; margin:1rem 0;
                 color:#4a90ff;
             }
+
+            .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-bottom:0.5rem;
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                    0%, 100% { opacity:0.3; }
+                    50% { opacity:1; }
+            }
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
@@ -135,7 +147,7 @@
 
         <h2>Reporte General</h2>
         <div class="progress-container"><div class="progress-bar" id="progress"></div></div>
-
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
         <div class="scroll-horizontal" id="carousel">
         
             <div class="card">
@@ -147,7 +159,7 @@
             <div class="card">
                 <h3>Número de Pagos</h3>
                 <div class="divider"></div>
-                <p>2</p>
+                <p>3</p>
             </div>
             
             <div class="card">
@@ -159,13 +171,13 @@
             <div class="card">
                 <h3>Total pagado</h3>
                 <div class="divider"></div>
-                <p><span class='money'>$ 800.0</span></p>
+                <p><span class='money'>$ 1100.0</span></p>
             </div>
             
             <div class="card">
                 <h3>Restante por Pagar</h3>
                 <div class="divider"></div>
-                <p><span class='money'>$ 1700.0</span></p>
+                <p><span class='money'>$ 1400.0</span></p>
             </div>
             
             <div class="card">
@@ -195,7 +207,17 @@
         <script>
         const carousel = document.getElementById('carousel');
         const progress = document.getElementById('progress');
+        const hint = document.getElementById('scrollHint');
 
+        // Mostrar/ocultar hint solo si hay scroll horizontal
+        function checkScroll() {
+            if (carousel.scrollWidth > carousel.clientWidth) {
+                hint.style.display = 'block';
+            } else {
+                hint.style.display = 'none';
+            }
+        }
+        checkScroll();
         carousel.addEventListener('scroll', () => {
         const scrollLeft = carousel.scrollLeft;
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;

@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,259 +153,230 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-026</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-29</p>
-                <p><b>Total:</b> $1500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-025</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-15</p>
-                <p><b>Total:</b> $1500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-024</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-023</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-30</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-022</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-021</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-01</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-020</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-019</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-31</p>
-                <p><b>Total:</b> $1400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-018</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-017</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-28</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-31</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-19</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-29</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-31</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-02</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-09-16</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-31</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-15</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-30</p>
-                <p><b>Total:</b> $750.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-29</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomoto-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-027</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-29</p>
+                    <p><b>Total:</b> $1500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-026</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-15</p>
+                    <p><b>Total:</b> $1500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-025</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-024</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-30</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-023</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-022</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-01</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-021</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-020</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-31</p>
+                    <p><b>Total:</b> $1400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-019</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-018</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-28</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-31</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-19</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-29</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-31</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-02</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-09-16</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-31</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-15</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-30</p>
+                    <p><b>Total:</b> $750.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-29</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -400,11 +385,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

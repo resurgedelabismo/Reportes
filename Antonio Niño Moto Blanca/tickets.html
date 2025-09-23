@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,277 +153,246 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-Antonio_Niño_Moto_Blanca-027</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-17</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-ANTONIO_NIÑO_MOTO_BLANCA</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-08</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-026</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-19</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-025</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-03</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-024</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-05</p>
-                <p><b>Total:</b> $1400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-023</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-05</p>
-                <p><b>Total:</b> $1400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-022</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-19</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-021</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-19</p>
-                <p><b>Total:</b> $1500.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-020</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-02</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-019</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-18</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-018</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-05</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-017</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-03</p>
-                <p><b>Total:</b> $1400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-16</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-02</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-17</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-01</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-18</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-03</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-16</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-10-02</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-09-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-30</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-17</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-08-01</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-15</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-07-01</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-16</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-06-02</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-antonioniñomotoblanca-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-05-31</p>
-                <p><b>Total:</b> $700.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-029</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-17</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-028</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-08</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-027</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-19</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-026</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-03</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-025</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-05</p>
+                    <p><b>Total:</b> $1400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-024</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-05</p>
+                    <p><b>Total:</b> $1400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-023</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-19</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-022</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-19</p>
+                    <p><b>Total:</b> $1500.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-021</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-02</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-020</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-18</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-019</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-05</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-018</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-03</p>
+                    <p><b>Total:</b> $1400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-16</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-02</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-17</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-01</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-18</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-03</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-16</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-10-02</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-09-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-30</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-17</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-01</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-15</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-01</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-16</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-02</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Antonio Niño Moto Blanca-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-05-31</p>
+                    <p><b>Total:</b> $700.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -418,11 +401,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

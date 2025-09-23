@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,169 +153,150 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-Miriam_Lopez-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-17</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-01</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-16</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-02</p>
-                <p><b>Total:</b> $1000.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-16</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-01</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-18</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-04</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-17</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-05</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-17</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-02</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-18</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-05</p>
-                <p><b>Total:</b> $200.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-28</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-19</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-miriamlopez-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-04</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-17</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-01</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-16</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-02</p>
+                    <p><b>Total:</b> $1000.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-16</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-01</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-18</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-04</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-17</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-05</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-17</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-02</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-18</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-05</p>
+                    <p><b>Total:</b> $200.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-28</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-19</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Miriam Lopez-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-04</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -310,11 +305,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

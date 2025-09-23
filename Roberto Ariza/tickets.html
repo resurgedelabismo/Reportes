@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,304 +153,270 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-ROBERTO_ARIZA</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-08</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-030</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-01</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-029</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-18</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-028</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-11</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-027</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-04</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-026</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-28</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-025</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-21</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-024</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-14</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-023</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-07</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-022</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-28</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-021</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-23 20:21:26</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-020</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-16</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-019</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-09</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-018</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-02</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-017</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-26</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-19</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Efectivo</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-12</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-05</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-28</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-21</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-07</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-31</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-24</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-18</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-10</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-01</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-24</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-17</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-08</p>
-                <p><b>Total:</b> $100.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-04</p>
-                <p><b>Total:</b> $100.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-27</p>
-                <p><b>Total:</b> $100.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-robertoariza-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-18</p>
-                <p><b>Total:</b> $150.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-032</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-08</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-031</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-01</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-030</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-18</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-029</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-11</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-028</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-04</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-027</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-28</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-026</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-21</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-025</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-14</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-024</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-07</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-023</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-28</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-022</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-23 20:21:26</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-021</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-16</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-020</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-09</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-019</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-02</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-018</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-26</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-19</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-12</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-05</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-28</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-21</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-07</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-31</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-24</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-18</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-10</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-01</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-24</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-17</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-08</p>
+                    <p><b>Total:</b> $100.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-04</p>
+                    <p><b>Total:</b> $100.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-27</p>
+                    <p><b>Total:</b> $100.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Roberto Ariza-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-18</p>
+                    <p><b>Total:</b> $150.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -445,11 +425,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

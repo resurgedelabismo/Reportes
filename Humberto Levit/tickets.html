@@ -55,11 +55,25 @@
                 color:#4a90ff;
             }
 
+                        .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-top:0.5rem;
+                display:none; /* Oculto por defecto */
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                0%, 100% { opacity:0.3; }
+                50% { opacity:1; }
+            }
+
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
                 -webkit-overflow-scrolling:touch;
                 gap:16px; padding:20px;
+                position:relative;
         
             }
 
@@ -139,214 +153,198 @@
         </nav>
 
         <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
 
 
         <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Ticket PAG-HUMBERTO_LEVIT</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-09-08</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-020</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-25</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-019</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-08-11</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Transferencia</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-018</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-28</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-017</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-07-14</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-016</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-30</p>
-                <p><b>Total:</b> $400.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-015</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-16</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Tarjeta</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-014</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-06-02</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-013</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-19</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-012</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-05-05</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-011</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-21</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-010</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-04-07</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-009</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-25</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-008</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-03-10</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-007</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-24</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-006</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-02-10</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-005</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-27</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-004</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2025-01-13</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-003</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-30</p>
-                <p><b>Total:</b> $300.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-002</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-16</p>
-                <p><b>Total:</b> $250.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-001</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-12-02</p>
-                <p><b>Total:</b> $250.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
-            <div class="card">
-                <h3>Ticket PAG-humbertolevit-000</h3>
-                <div class="divider"></div>
-                <p><b>Fecha:</b> 2024-11-23</p>
-                <p><b>Total:</b> $500.00</p>
-                <p><b>Tipo:</b> Parcial</p>
-                
-            </div>
-        
+                <div class="card">
+                    <h3>Ticket Humberto Levit-023</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-22</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-022</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-09-08</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-021</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-25</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-020</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-08-11</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Transferencia</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-019</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-28</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-018</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-07-14</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-017</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-30</p>
+                    <p><b>Total:</b> $400.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-016</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-16</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Tarjeta</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-015</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-06-02</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-014</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-19</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-013</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-05-05</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-012</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-21</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-011</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-04-07</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-010</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-25</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-009</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-03-10</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-008</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-24</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-007</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-02-10</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-27</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-13</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-30</p>
+                    <p><b>Total:</b> $300.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-16</p>
+                    <p><b>Total:</b> $250.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-12-02</p>
+                    <p><b>Total:</b> $250.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Humberto Levit-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-11-23</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Parcial</p>
+                </div>
+            
         </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
 
         <footer>
             © Resurge | Donde los sueños renacen
@@ -355,11 +353,20 @@
         <script>
         const scroll = document.getElementById('ticketScroll');
         const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
+        // Progreso
         scroll.addEventListener('scroll', () => {
             const maxScroll = scroll.scrollWidth - scroll.clientWidth;
             const percent = (scroll.scrollLeft / maxScroll) * 100;
             bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
         });
         </script>
 

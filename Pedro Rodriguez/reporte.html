@@ -49,6 +49,18 @@
                 text-align:center; margin:1rem 0;
                 color:#4a90ff;
             }
+
+            .scroll-hint {
+                text-align:center;
+                font-size:0.9rem;
+                color:#6caeff;
+                margin-bottom:0.5rem;
+                animation: fadeBlink 2s infinite;
+            }
+            @keyframes fadeBlink {
+                    0%, 100% { opacity:0.3; }
+                    50% { opacity:1; }
+            }
             .scroll-horizontal {
                 display:flex; overflow-x:auto;
                 scroll-snap-type:x mandatory;
@@ -135,13 +147,13 @@
 
         <h2>Reporte General</h2>
         <div class="progress-container"><div class="progress-bar" id="progress"></div></div>
-
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
         <div class="scroll-horizontal" id="carousel">
         
             <div class="card">
                 <h3>Número de Ventas</h3>
                 <div class="divider"></div>
-                <p>12</p>
+                <p>15</p>
             </div>
             
             <div class="card">
@@ -153,7 +165,7 @@
             <div class="card">
                 <h3>Total precios</h3>
                 <div class="divider"></div>
-                <p><span class='money'>$ 51900.0</span></p>
+                <p><span class='money'>$ 58400.0</span></p>
             </div>
             
             <div class="card">
@@ -165,7 +177,7 @@
             <div class="card">
                 <h3>Restante por Pagar</h3>
                 <div class="divider"></div>
-                <p><span class='money'>$ 43650.0</span></p>
+                <p><span class='money'>$ 50150.0</span></p>
             </div>
             
             <div class="card">
@@ -177,7 +189,7 @@
             <div class="card">
                 <h3>Puntos</h3>
                 <div class="divider"></div>
-                <p>446.64</p>
+                <p>507.24</p>
             </div>
             
             <div class="card">
@@ -195,7 +207,17 @@
         <script>
         const carousel = document.getElementById('carousel');
         const progress = document.getElementById('progress');
+        const hint = document.getElementById('scrollHint');
 
+        // Mostrar/ocultar hint solo si hay scroll horizontal
+        function checkScroll() {
+            if (carousel.scrollWidth > carousel.clientWidth) {
+                hint.style.display = 'block';
+            } else {
+                hint.style.display = 'none';
+            }
+        }
+        checkScroll();
         carousel.addEventListener('scroll', () => {
         const scrollLeft = carousel.scrollLeft;
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
