@@ -1,0 +1,207 @@
+
+    <html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Eva Castillo</title>
+    <style>
+    /* ====== BASE GENERAL ====== */
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0; padding: 0;
+        background: linear-gradient(160deg, #050505, #0a0f20);
+        color: #e6edf3;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    main { flex: 1; }
+
+    /* ====== HEADER ====== */
+    header {
+        padding: 2.5rem 1rem 2rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 200, 255, 0.4);
+        box-shadow: 0 0 25px rgba(0, 200, 255, 0.35);
+        border-radius: 0 0 22px 22px;
+        background: rgba(0, 15, 30, 0.85);
+        backdrop-filter: blur(6px);
+        animation: fadeIn 1.2s ease forwards;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        color: #6caeff;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow:
+            0 0 15px #00eaff,
+            0 0 30px #00bbff,
+            0 0 45px #00ccffbb;
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+    header p {
+        margin-top: 0.7rem;
+        font-size: 1rem;
+        opacity: 0.9;
+        color: #a3e7ff;
+        text-shadow: 0 0 10px #00aaff55;
+    }
+
+    /* ====== NAV ====== */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 10px;
+        background: rgba(0, 10, 20, 0.9);
+        border-bottom: 1px solid rgba(0, 200, 255, 0.25);
+        box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(8px);
+    }
+    nav a {
+        color: #e0faff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #0f1c2e, #132c45);
+        border: 1px solid rgba(0, 174, 255, 0.5);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+    }
+    nav a:hover {
+        background: #0a1a2f;
+        box-shadow: 0 0 15px #00bbff77;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    /* ====== SECTION / CARDS ====== */
+    section {
+    padding: 2.5rem;
+    max-width: 650px;
+    margin: 2rem auto;
+    text-align: center;
+    background: rgba(10, 20, 40, 0.85); /* mismo fondo que las cards */
+    border-radius: 20px; /* armoniza con cards */
+    border: 1px solid rgba(0, 174, 255, 0.6); /* borde cian como cards */
+    box-shadow: 0 0 25px rgba(0, 174, 255, 0.25), 0 0 36px rgba(0, 174, 255, 0.15); /* glow suave */
+    backdrop-filter: blur(10px); /* mismo efecto de blur que cards */
+    background-image: repeating-linear-gradient(
+        45deg, rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px, transparent 2px
+        );
+    }
+    section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bbff; /* cian como titles de cards */
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 12px #00bbffaa; /* glow más suave */
+    animation: glowPulse 4s ease-in-out infinite;
+    }
+    section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #e6faff; /* mismo blanco cian que cards */
+    }
+    section p.vision {
+        font-style: italic; color: #a3e7ff; opacity: 0.9;
+        margin-top: 1.2rem;
+    }
+    section p.lema {
+        font-size: 1.1rem; color: #00eaff;
+        font-weight: bold; letter-spacing: 0.5px;
+        margin-top: 0.8rem;
+        animation: glowPulse 2.5s infinite alternate;
+    }
+
+    /* ====== DIVIDER ====== */
+    .divider {
+        width: 60%;
+        margin: 14px auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.7), transparent);
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.85rem;
+        background: rgba(0, 10, 20, 0.95);
+        border-top: 1px solid rgba(0, 200, 255, 0.35);
+        box-shadow: 0 0 25px rgba(0, 200, 255, 0.3);
+        color: #88aacc;
+    }
+
+    /* ====== ANIMACIONES ====== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glowPulse {
+        0%, 100% {
+            text-shadow:
+                0 0 15px #00eaff,
+                0 0 25px #005aff,
+                0 0 35px #00bbffbb;
+        }
+        50% {
+            text-shadow:
+                0 0 25px #00ffff,
+                0 0 40px #00bbff,
+                0 0 50px #00eaffdd;
+        }
+    }
+</style>
+
+
+
+
+
+    </head>
+    <body>
+
+    <header>
+        <h1>Eva Castillo</h1>
+        <p>Accede rápidamente al perfil de usuario</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="notas.html">Notas</a>
+        <a href="reporte.html">Reporte</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Hola, Eva Castillo.</h2>
+            <p>Muchas gracias por tu <strong>confianza</strong> y <strong>preferencia</strong>.</p>
+            <p>Estamos felices de acompañarte en este viaje.<br>
+            Tu presencia nos inspira a seguir creciendo contigo.</p>
+            <p class="vision">
+                Resurge fue creado para quienes no temen <strong>reinventarse</strong> con tal de romper lo que ya está dado por hecho.<br>
+                Para aquellos que, aun cayendo al abismo, <strong>renacen una y otra vez</strong>, no como eran, sino como deciden ser.<br>
+                Resurge es el lugar donde vuelves a soñar.
+            </p>
+            <p class="lema">✦ Resurge, donde los sueños Renacen ✦</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Resurge | Donde los sueños renacen</p>
+    </footer>
+
+    </body>
+    </html>
+    
