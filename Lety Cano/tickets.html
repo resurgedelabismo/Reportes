@@ -1,0 +1,331 @@
+
+        <html lang="es">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tickets de Lety Cano</title>
+<style>
+  /* ====== BASE GENERAL ====== */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding: 0;
+    background: linear-gradient(160deg, #050505, #0a0f20);
+    color: #e6edf3;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ====== HEADER ====== */
+  header {
+    padding: 2.5rem 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 200, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.35);
+    border-radius: 0 0 22px 22px;
+    background: rgba(0, 15, 30, 0.85);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 1.2s ease forwards;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #6caeff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow:
+      0 0 15px #00eaff,
+      0 0 30px #00bbff,
+      0 0 45px #00ccffbb;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+  header p {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    color: #a3e7ff;
+    text-shadow: 0 0 10px #00aaff55;
+  }
+
+  /* ====== NAV ====== */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(0, 10, 20, 0.9);
+    border-bottom: 1px solid rgba(0, 200, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+  }
+  nav a {
+    color: #e0faff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0f1c2e, #132c45);
+    border: 1px solid rgba(0, 174, 255, 0.5);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+  }
+  nav a:hover {
+    background: #0a1a2f;
+    box-shadow: 0 0 15px #00bbff77;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* ====== SECCIONES ====== */
+  h2 {
+    text-align: center;
+    margin: 1.5rem 0 1rem;
+    font-family: 'Cinzel', serif;
+    color: #a3e7ff;
+    font-size: 2rem;
+    text-shadow: 0 0 15px #00eaffaa;
+    animation: glowPulse 4s ease-in-out infinite;
+    position: relative;
+  }
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #00aaff, #0044bb);
+    border-radius: 2px;
+    box-shadow: 0 0 12px #00aaffbb;
+  }
+
+  /* ====== HINT SCROLL ====== */
+  .scroll-hint {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6caeff;
+    margin-top: 0.5rem;
+    display: none;
+    animation: fadeBlink 2s infinite;
+  }
+  @keyframes fadeBlink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* ====== CARDS HORIZONTALES ====== */
+  .scroll-horizontal {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 18px;
+    padding: 22px;
+    position: relative;
+  }
+  .card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    background: rgba(10, 20, 40, 0.85);
+    border: 1px solid rgba(0, 174, 255, 0.6);
+    border-radius: 20px;
+    padding: 26px;
+    min-height: 240px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(0, 174, 255, 0.35);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.55);
+  }
+  .card h3 {
+    margin: 0;
+    color: #00bbff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px #00bbffaa;
+  }
+  .card p {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    color: #e6faff;
+    text-shadow: 0 0 10px #00ccff44;
+  }
+
+  /* ====== PROGRESS BAR ====== */
+  .progress-container {
+    width: 100%; height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%; width: 0%;
+    background: #00aaff;
+    box-shadow: 0 0 12px #00aaff;
+    transition: width 0.4s ease;
+  }
+
+  /* ====== DIVIDER ====== */
+  .divider {
+    width: 60%;
+    margin: 14px auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.7), transparent);
+  }
+
+  /* ====== FOOTER ====== */
+  footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    background: rgba(0, 10, 20, 0.95);
+    border-top: 1px solid rgba(0, 200, 255, 0.35);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.3);
+    color: #88aacc;
+  }
+
+  /* ====== ANIMACIONES ====== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes glowPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 15px #00eaff,
+        0 0 25px #005aff,
+        0 0 35px #00bbffbb;
+    }
+    50% {
+      text-shadow:
+        0 0 25px #00ffff,
+        0 0 40px #00bbff,
+        0 0 50px #00eaffdd;
+    }
+  }
+</style>
+
+        </head>
+        <body>
+
+        <header>
+            <h1>Lety Cano</h1>
+            <p>Accede rápidamente al perfil de usuario</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="notas.html">Notas</a>
+            <a href="reporte.html">Reporte</a>
+        </nav>
+
+        <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
+
+        <div class="scroll-horizontal" id="ticketScroll">
+        
+                <div class="card">
+                    <h3>Ticket Lety Cano-006</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2025-01-16</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Lety Cano-005</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-08-15</p>
+                    <p><b>Total:</b> $200.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Lety Cano-004</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-07-18</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Lety Cano-003</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-06-13</p>
+                    <p><b>Total:</b> $500.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Lety Cano-002</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-02-28</p>
+                    <p><b>Total:</b> $200.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+                <div class="card">
+                    <h3>Ticket Lety Cano-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 2024-01-18</p>
+                    <p><b>Total:</b> $200.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
+            
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <footer>
+            © Resurge | Donde los sueños renacen
+        </footer>
+
+        <script>
+        const scroll = document.getElementById('ticketScroll');
+        const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
+
+        // Progreso
+        scroll.addEventListener('scroll', () => {
+            const maxScroll = scroll.scrollWidth - scroll.clientWidth;
+            const percent = (scroll.scrollLeft / maxScroll) * 100;
+            bar.style.width = percent + '%';
+        });
+
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
+        });
+        </script>
+
+        </body>
+        </html>
+        
