@@ -1,0 +1,86 @@
+
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticket de Pago - Briant Sanchez</title>
+        <style>
+            body {
+                margin: 0; padding: 0;
+                font-family: 'Segoe UI', sans-serif;
+                background: linear-gradient(160deg, #050505, #0a0f20);
+                color: #e6edf3;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card {
+                max-width: 500px;
+                width: 92%;
+                background: rgba(15, 25, 50, 0.95);
+                padding: 2rem;
+                border-radius: 18px;
+                border: 1px solid rgba(0, 200, 255, 0.4);
+                box-shadow: 0 0 22px rgba(0, 200, 255, 0.35);
+                animation: fadeIn 0.8s ease forwards;
+            }
+            h1 {
+                color: #00ffa6;
+                text-align: center;
+                margin-bottom: 1.2rem;
+                font-size: 1.8rem;
+                text-shadow: 0 0 12px #00ffccaa;
+            }
+            .detalle {
+                margin: 0.7rem 0;
+                padding: 0.7rem 1rem;
+                background: rgba(0,40,70,0.55);
+                border-radius: 10px;
+                border: 1px solid rgba(0,200,255,0.3);
+                font-size: 1rem;
+            }
+            .confirmacion {
+                margin-top: 1.5rem;
+                padding: 1rem;
+                background: rgba(0, 255, 170, 0.08);
+                border-radius: 12px;
+                font-size: 1rem;
+                text-align: center;
+                color: #8affd3;
+                font-style: italic;
+                line-height: 1.5;
+            }
+            .footer {
+                margin-top: 1.8rem;
+                text-align: center;
+                font-size: 0.85rem;
+                color: #88aacc;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(25px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>💳 Ticket de Pago</h1>
+            <div class="detalle"><strong>ID Pago:</strong> PAG-Briant_Sanchez-002</div>
+            <div class="detalle"><strong>Cliente:</strong> Briant Sanchez</div>
+            <div class="detalle"><strong>Monto:</strong> $300.00</div>
+            <div class="detalle"><strong>Tipo de pago:</strong> Transferencia</div>
+            <div class="detalle"><strong>Ubicación:</strong> CoppelS</div>
+            <div class="detalle"><strong>Fecha:</strong> 2025-09-30</div>
+
+            <div class="confirmacion">
+                ✔ Tu pago ha sido recibido y registrado exitosamente.<br>
+                Gracias por seguir confiando en <strong>Resurge</strong>.<br>
+                ¡Cada paso cuenta para cumplir tus sueños! ✨
+            </div>
+
+            <div class="footer">© Resurge | Impulsando tus metas 🚀</div>
+        </div>
+    </body>
+    </html>
+    
