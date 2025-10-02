@@ -1,0 +1,169 @@
+
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ticket de Pago - Juan Jesus Flores</title>
+<style>
+:root {
+    --resurge-blue-dark: #050a20;
+    --resurge-blue-medium: #0a1f40;
+    --resurge-blue-light: #00c8ff;
+    --resurge-blue-accent: #33d1ff;
+    --resurge-bg: linear-gradient(160deg, #050a20, #0a1f40);
+    --resurge-red: #ff3a3a;
+}
+
+body {
+    margin:0; padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--resurge-bg);
+    color:#e6edf3;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card {
+    width:92%; max-width:430px;
+    background: rgba(10,31,64,0.96);
+    padding:1.5rem;
+    border-radius:18px;
+    border:1px solid rgba(0,200,255,0.35);
+    box-shadow:0 0 20px rgba(0,200,255,0.3);
+    animation:fadeIn 0.8s ease forwards;
+    overflow:hidden;
+}
+
+.banner {
+    background: linear-gradient(90deg, var(--resurge-blue-light), var(--resurge-blue-accent));
+    padding:0.8rem;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.2rem;
+    color:#050a20;
+    border-radius:12px;
+    margin-bottom:1rem;
+}
+
+h1 {
+    text-align:center;
+    color: var(--resurge-blue-accent);
+    font-size:1.6rem;
+    text-shadow:0 0 12px #33d1ff88;
+    margin:0.8rem 0 1rem 0;
+}
+
+.detalle {
+    margin:0.7rem 0;
+    padding:0.8rem;
+    background: rgba(5,10,32,0.55);
+    border-radius:10px;
+    border:1px solid rgba(0,200,255,0.25);
+    font-size:1rem;
+    line-height:1.4;
+}
+
+.red-divider {
+    width:50px; height:3px;
+    background: var(--resurge-red);
+    margin:12px auto;
+    border-radius:2px;
+}
+
+.confirmacion {
+    margin-top:1.2rem;
+    padding:1rem;
+    background: rgba(0,200,255,0.08);
+    border-radius:12px;
+    font-size:1rem;
+    text-align:center;
+    color: var(--resurge-blue-accent);
+    font-style: italic;
+    line-height:1.5;
+    animation:bounce 1.2s infinite;
+}
+
+.footer {
+    margin-top:1.5rem;
+    text-align:center;
+    font-size:0.85rem;
+    color: rgba(51,209,255,0.7);
+}
+
+.cta {
+    margin-top:1rem;
+    text-align:center;
+}
+
+.btn {
+    display:inline-block;
+    padding:0.6rem 1rem;
+    background: var(--resurge-blue-light);
+    color:#050a20;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:0.95rem;
+    border:1px solid var(--resurge-blue-accent);
+    box-shadow:0 0 6px rgba(0,200,255,0.3);
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background: var(--resurge-blue-accent);
+    box-shadow:0 0 12px rgba(0,200,255,0.6);
+}
+
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes bounce {
+    0%, 100% { transform:translateY(0); }
+    50% { transform:translateY(-4px); }
+}
+
+@media (max-width:480px){
+    body { align-items:flex-start; padding:1rem 0; }
+    .card { width:95%; padding:1.2rem; border-radius:14px; }
+    h1 { font-size:1.4rem; }
+    .detalle { font-size:0.95rem; padding:0.6rem; }
+    .confirmacion { font-size:0.95rem; padding:0.8rem; }
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="banner"> Pago recibido con éxito! </div>
+    <h1>Ticket de Pago</h1>
+
+    <div class="detalle"><strong>Folio:</strong> PAG-Juan_Jesus_Flores-012</div>
+    <div class="detalle"><strong>Miembro:</strong> Juan Jesus Flores</div>
+    <div class="detalle"><strong>Monto:</strong> $250.00</div>
+    <div class="detalle"><strong>Tipo de pago:</strong> Efectivo</div>
+   
+    <div class="detalle"><strong>Fecha:</strong> 2025-10-02</div>
+
+    <div class="red-divider"></div>
+
+    <div class="confirmacion">
+         Tu pago ha sido registrado correctamente.<br>
+        Gracias por confiar en <strong>Resurge</strong>.<br>
+        ¡Cada paso nos acerca a tus sueños! 
+    </div>
+
+    <div class="cta">
+        <a class="btn" href="https://wa.me/527355672050?text=Hola%20Resurge,%20quiero%20información%20sobre%20mi%20pago%20Juan Jesus Flores" target="_blank">
+            💬 Contactar por WhatsApp
+        </a>
+    </div>
+
+
+    <div class="footer">© Resurge | Donde los sueños renacen</div>
+</div>
+</body>
+</html>
