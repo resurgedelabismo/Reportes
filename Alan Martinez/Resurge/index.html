@@ -141,25 +141,23 @@ footer span {
     color: var(--red);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* Portrait (vertical): scroll vertical */
+@media (max-width: 768px) and (orientation: portrait) {
     main {
-        flex-direction: row;
-        position: fixed;
-        left: 50%;
-        top: auto;
-        bottom: 1rem;
-        transform: translateX(-50%);
-        min-width: unset;
-        max-width: unset;
-        overflow-x: auto;
-        gap: 1rem;
-        padding: 0 1rem;
+        flex-direction: column;
+        position: static; /* que fluya dentro del body */
+        width: 100%;
+        max-height: none;
+        overflow-y: auto; /* scroll vertical natural */
+        overflow-x: hidden;
+        margin: 1rem auto;
     }
     .card {
-        width: 160px;
-        flex: 0 0 auto;
+        width: 90%;
+        max-width: 320px;
+        margin: 0 auto;
     }
+}
     .logo-container img {
         max-width: 250px;
         opacity: 0.3;
@@ -173,7 +171,9 @@ footer span {
         </style>
     </head>
     <body>
-     
+        <div class="logo-container">
+            <img src="logotipo.png" alt="Logotipo">
+        </div>
 
         <main>
             <a class="card" href="queesresurge.html">
