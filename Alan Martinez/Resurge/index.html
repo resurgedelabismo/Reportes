@@ -38,6 +38,23 @@
         height: auto;
     }
 
+    .logo-background {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0; /* detrás de todo */
+        opacity: 0.15;
+        pointer-events: none;
+    }
+
+    .logo-background img {
+        max-width: 400px;
+        width: 80vw;
+        height: auto;
+    }
+
+
     /* Main lateral fijo con scroll vertical */
     main {
         display: flex;
@@ -125,8 +142,8 @@
     </style>
     </head>
     <body>
-        <div class="logo-container">
-            <img src="logotipo.png" alt="Logotipo">
+        <div class="logo-background">
+            <img src="logotipo.png" alt="Resurge">
         </div>
 
         <main>
