@@ -6,171 +6,133 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Galería - Alan Martinez</title>
 <style>
-:root {
-    --blue-dark: #001a33;
-    --blue: #1a73e8;
-    --white: #ffffff;
-    --black: #000000;
-    --red: #e53935;
-}
+    :root {
+        --blue: #1a73e8;
+        --white: #ffffff;
+        --black: #000000;
+        --red: #e53935;
+    }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: var(--black);
+        color: var(--white);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
-/* Marco del logotipo */
-.logo-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(10, 10, 20, 0.4);
-    border-radius: 25px;
-    padding: 3rem;
-    box-shadow: 0 0 50px rgba(0,0,0,0.7);
-    z-index: 0;
-}
-.logo-container img {
-    max-width: 70vw;  /* más proporcional */
-    height: auto;
-    opacity: 0.65;
-}
-
-/* Cards lateral en desktop */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    min-width: 250px;
-    max-width: 320px;
-    position: fixed;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    gap: 1rem;
-    z-index: 2;
-    max-height: 80vh;
-    padding: 1rem;
-    background: rgba(0, 15, 40, 0.35);
-    border-radius: 14px;
-    backdrop-filter: blur(6px);
-    overflow-y: auto;
-}
-
-/* Scroll personalizado */
-main::-webkit-scrollbar {
-    width: 8px;
-}
-main::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.1);
-    border-radius: 4px;
-}
-main::-webkit-scrollbar-thumb {
-    background: rgba(26,115,232,0.5);
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-main::-webkit-scrollbar-thumb:hover {
-    background: rgba(26,115,232,0.8);
-}
-
-/* Cards */
-.card {
-    background: rgba(0, 30, 60, 0.45);
-    backdrop-filter: blur(6px);
-    border: 1px solid var(--blue);
-    border-radius: 14px;
-    box-shadow: 0 0 12px rgba(26,115,232,0.5);
-    padding: 1.2rem;
-    min-width: 240px;
-    max-width: 280px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.card h3 {
-    font-size: 1.2rem;
-    margin: 0 0 0.6rem 0;
-    color: var(--blue);
-}
-.card p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    line-height: 1.5;
-}
-.card:hover {
-    transform: translateX(3px) scale(1.06);
-    box-shadow: 0 0 18px var(--blue);
-    border-color: var(--white);
-}
-.card::after {
-    content: "";
-    display: block;
-    margin-top: 0.7rem;
-    width: 30px;
-    height: 3px;
-    background: var(--red);
-    border-radius: 2px;
-}
-
-/* Footer */
-footer {
-    background: transparent;
-    color: var(--white);
-    padding: 2rem 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    text-align: center;
-}
-footer span {
-    color: var(--red);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    main {
-        flex-direction: row;
+    /* 🔹 Logo centrado como fondo */
+    .logo-background {
         position: fixed;
+        top: 50%;
         left: 50%;
-        top: auto;
-        bottom: 1rem;
-        transform: translateX(-50%);
-        min-width: unset;
-        max-width: unset;
-        overflow-x: auto;
-        gap: 1rem;
-        padding: 0 1rem;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        opacity: 0.15;
+        pointer-events: none;
     }
-    .card {
-        width: 160px;
-        flex: 0 0 auto;
+    .logo-background img {
+        max-width: 60vw;
+        height: auto;
     }
-    .logo-container img {
-        max-width: 250px;
-        opacity: 0.3;
-    }
-    footer {
-        font-size: 0.85rem;
-        padding: 1rem;
-    }
-}
 
-        </style>
+    /* 🔹 Main lateral */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 25%;
+        min-width: 200px;
+        max-width: 300px;
+        padding: 2%;
+        overflow-y: auto;
+        background: rgba(0, 15, 40, 0.35);
+        border-right: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(6px);
+        z-index: 2;
+    }
+
+    /* Scroll estilizado */
+    main::-webkit-scrollbar {
+        width: 6px;
+    }
+    main::-webkit-scrollbar-thumb {
+        background: rgba(26,115,232,0.5);
+        border-radius: 3px;
+    }
+
+    /* 🔹 Cards */
+    .card {
+        background: rgba(0, 30, 60, 0.45); /* más transparente */
+        border: 1px solid var(--blue);
+        border-radius: 12px;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        border-color: var(--white);
+        box-shadow: 0 0 15px var(--blue);
+    }
+    .card h3 {
+        margin: 0 0 0.5rem 0;
+        color: var(--blue);
+        font-size: 1.1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        line-height: 1.4;
+    }
+
+    /* 🔹 Footer premium */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        color: var(--white);
+        background: rgba(0,0,0,0.4);
+        backdrop-filter: blur(4px);
+        z-index: 2;
+    }
+    footer::before {
+        content: "";
+        display: block;
+        width: 80%;
+        margin: 0 auto 0.5rem auto;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    footer span {
+        color: var(--red);
+        font-weight: bold;
+    }
+
+    /* 🔹 Responsive */
+    @media (max-width: 768px) {
+        main {
+            width: 70%;
+            max-width: 80%;
+            min-width: 60%;
+        }
+        .logo-background img {
+            max-width: 80vw;
+            opacity: 0.12;
+        }
+    }
+    </style>
     </head>
     <body>
 
