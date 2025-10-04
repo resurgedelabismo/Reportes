@@ -1,0 +1,194 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Miembros - Alan Martinez</title>
+<style>
+:root {
+    --blue-dark: #001a33;
+    --blue: #1a73e8;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #e53935;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Marco del logotipo */
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 20, 0.4);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
+    z-index: 0;
+}
+.logo-container img {
+    max-width: 70vw;  /* más proporcional */
+    height: auto;
+    opacity: 0.65;
+}
+
+/* Cards lateral en desktop */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    min-width: 250px;
+    max-width: 320px;
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 1rem;
+    z-index: 2;
+    max-height: 80vh;
+    padding: 1rem;
+    background: rgba(0, 15, 40, 0.35);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    overflow-y: auto;
+}
+
+/* Scroll personalizado */
+main::-webkit-scrollbar {
+    width: 8px;
+}
+main::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+main::-webkit-scrollbar-thumb {
+    background: rgba(26,115,232,0.5);
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+main::-webkit-scrollbar-thumb:hover {
+    background: rgba(26,115,232,0.8);
+}
+
+/* Cards */
+.card {
+    background: rgba(0, 30, 60, 0.45);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--blue);
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(26,115,232,0.5);
+    padding: 1.2rem;
+    min-width: 240px;
+    max-width: 280px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem 0;
+    color: var(--blue);
+}
+.card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+.card:hover {
+    transform: translateX(3px) scale(1.06);
+    box-shadow: 0 0 18px var(--blue);
+    border-color: var(--white);
+}
+.card::after {
+    content: "";
+    display: block;
+    margin-top: 0.7rem;
+    width: 30px;
+    height: 3px;
+    background: var(--red);
+    border-radius: 2px;
+}
+
+/* Footer */
+footer {
+    background: transparent;
+    color: var(--white);
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+}
+footer span {
+    color: var(--red);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        flex-direction: row;
+        position: fixed;
+        left: 50%;
+        top: auto;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        min-width: unset;
+        max-width: unset;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .card {
+        width: 160px;
+        flex: 0 0 auto;
+    }
+    .logo-container img {
+        max-width: 250px;
+        opacity: 0.3;
+    }
+    footer {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+
+        <div class="logo-container">
+            <img src="logotipo.png" alt="Logotipo">
+        </div>
+            <header>
+                <h1>Miembros</h1>
+            </header>
+
+        <main>
+            <h2>Miembros Resurge</h2><p>Explora nuestra red de miembros y descubre historias inspiradoras.</p>
+            <a href="index.html" class="boton">Inicio</a>
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
+    </html>
+    

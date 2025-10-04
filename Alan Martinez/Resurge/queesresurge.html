@@ -1,0 +1,297 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> - Alan Martinez</title>
+<style>
+:root {
+    --blue-dark: #001a33;
+    --blue: #1a73e8;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #e53935;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Marco del logotipo */
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 20, 0.4);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7);
+    z-index: 0;
+}
+.logo-container img {
+    max-width: 70vw;  /* más proporcional */
+    height: auto;
+    opacity: 0.65;
+}
+
+/* Cards lateral en desktop */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    min-width: 250px;
+    max-width: 320px;
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 1rem;
+    z-index: 2;
+    max-height: 80vh;
+    padding: 1rem;
+    background: rgba(0, 15, 40, 0.35);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    overflow-y: auto;
+}
+
+/* Scroll personalizado */
+main::-webkit-scrollbar {
+    width: 8px;
+}
+main::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+main::-webkit-scrollbar-thumb {
+    background: rgba(26,115,232,0.5);
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+main::-webkit-scrollbar-thumb:hover {
+    background: rgba(26,115,232,0.8);
+}
+
+/* Cards */
+.card {
+    background: rgba(0, 30, 60, 0.45);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--blue);
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(26,115,232,0.5);
+    padding: 1.2rem;
+    min-width: 240px;
+    max-width: 280px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem 0;
+    color: var(--blue);
+}
+.card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+.card:hover {
+    transform: translateX(3px) scale(1.06);
+    box-shadow: 0 0 18px var(--blue);
+    border-color: var(--white);
+}
+.card::after {
+    content: "";
+    display: block;
+    margin-top: 0.7rem;
+    width: 30px;
+    height: 3px;
+    background: var(--red);
+    border-radius: 2px;
+}
+
+/* Footer */
+footer {
+    background: transparent;
+    color: var(--white);
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+}
+footer span {
+    color: var(--red);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    main {
+        flex-direction: row;
+        position: fixed;
+        left: 50%;
+        top: auto;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        min-width: unset;
+        max-width: unset;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .card {
+        width: 160px;
+        flex: 0 0 auto;
+    }
+    .logo-container img {
+        max-width: 250px;
+        opacity: 0.3;
+    }
+    footer {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+
+        <div class="logo-container">
+            <img src="logotipo.png" alt="Logotipo">
+        </div>
+            <header>
+                <h1></h1>
+            </header>
+
+        <main>
+            
+            <h2>¿Qué es <b>RESURGE?</b></h2>
+            <p><em>“Donde los sueños renacen.”</em></p>
+
+            <section class="card">
+                <h3> 1. Declaración de Origen</h3>
+                <p>
+                    Resurge nace de una idea poderosa: que los sueños no mueren, solo esperan el entorno correcto para volver a volar.
+                </p>
+                <p>
+                    No vendemos productos. <b>Construimos caminos.</b><br>
+                    No ofrecemos servicios. <b>Diseñamos experiencias.</b><br>
+                    No prometemos sueños. <b>Los convertimos en metas alcanzables.</b>
+                </p>
+                <p>
+                    Resurge no fue creado para seguir las reglas del mercado. Nació para <b>reescribirlas</b>.
+                </p>
+            </section>
+
+            <section class="card">
+                <h3> 2. Misión</h3>
+                <p>
+                    <b>Nuestra misión</b> es acompañar a cada persona en el proceso de transformar sus sueños en realidad,
+                    brindando un ecosistema integral de servicios, productos y experiencias diseñadas con humanidad,
+                    inteligencia y propósito.
+                </p>
+            </section>
+
+            <section class="card">
+                <h3> 3. Visión</h3>
+                <p>
+                    Ser la plataforma más humana, poderosa e influyente del mundo, donde la tecnología, el servicio personalizado
+                    y la excelencia se fusionen para guiar a millones de personas a vivir la vida que siempre imaginaron.
+                </p>
+            </section>
+
+            <section class="card">
+                <h3> 4. Filosofía Central</h3>
+                <blockquote>
+                    “Renacer no es volver… es ascender.”
+                </blockquote>
+                <ul>
+                    <li> Humanidad antes que automatización.</li>
+                    <li> Crecimiento constante.</li>
+                    <li> Compromiso absoluto.</li>
+                    <li> Libertad como destino.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3> 5. Símbolo y Significado</h3>
+                <ul>
+                    <li> Alas del fénix: resiliencia y ascenso.</li>
+                    <li> Hielo y fuego: razón y pasión.</li>
+                    <li> Negro: elegancia y profundidad.</li>
+                    <li> Azul, blanco y rojo: confianza, claridad y poder.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3> 6. Estructura de Valor</h3>
+                <ul>
+                    <li>Estilo</li>
+                    <li>Tecno</li>
+                    <li>Motors</li>
+                    <li>Belleza</li>
+                    <li>Servicios</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3>7. Promesa de Marca</h3>
+                <p>
+                    <b>Humano</b>: atención real.<br>
+                    <b>Personalizado</b>: cada recomendación diseñada para ti.<br>
+                    <b>Transformador</b>: no saldrás siendo el mismo, saldrás siendo más.
+                </p>
+            </section>
+
+            <section class="card">
+                <h3>8. Manifiesto de Cultura Interna</h3>
+                <p>
+                    Quienes trabajamos en Resurge no somos empleados. Somos <b>arquitectos del renacimiento</b>.
+                </p>
+                <ul>
+                    <li>Disciplina sin rigidez.</li>
+                    <li>Empatía sin complacencia.</li>
+                    <li>Ambición sin ego.</li>
+                    <li>Innovación con propósito.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h3>9. Juramento de Expansión</h3>
+                <p>
+                    Resurge no dejará de evolucionar hasta convertirse en el lugar donde cada sueño tenga un camino claro hacia su realización.
+                </p>
+                <p><b>Resurge no compite. Resurge trasciende.</b></p>
+            </section>
+
+            <blockquote>
+                “Aquí, los sueños no se venden. Aquí, los sueños renacen.”
+            </blockquote>
+            
+            <a href="index.html" class="boton">Inicio</a>
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
+    </html>
+    
