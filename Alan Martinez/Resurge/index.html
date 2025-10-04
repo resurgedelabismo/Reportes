@@ -1,154 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resurge - Inicio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <img src="logotipo.png" alt="Resurge" class="logo">
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="queesresurge.html">Qué es Resurge</a>
+      <a href="galeria.html">Galería</a>
+      <a href="catalogos.html">Catálogos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resurge - {nombre_miembro}</title>
-<style>
-:root {
-    --blue: #1a73e8;
-    --white: #ffffff;
-    --black: #000000;
-    --red: #e53935;
-}
+  <section class="hero">
+    <h1>Resurge</h1>
+    <p>Impulsando sueños hacia la realidad</p>
+    <a href="queesresurge.html" class="btn">Conoce más</a>
+  </section>
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--black) url("logotipo.png") no-repeat center center;
-    background-size: contain;   /* logo visible pero no recortado */
-    background-attachment: fixed; /* siempre al fondo */
-    color: var(--white);
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* 🔹 Main lateral */
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 25%;
-    min-width: 200px;
-    max-width: 300px;
-    padding: 2%;
-    overflow-y: auto;
-    background: rgba(0, 15, 40, 0.4);  /* translúcido para que pase el logo */
-    border-right: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    z-index: 2;
-}
-
-/* Scroll estilizado */
-main::-webkit-scrollbar {
-    width: 6px;
-}
-main::-webkit-scrollbar-thumb {
-    background: rgba(26,115,232,0.5);
-    border-radius: 3px;
-}
-
-/* 🔹 Cards */
-.card {
-    background: rgba(0, 30, 60, 0.45);
-    border: 1px solid var(--blue);
-    border-radius: 12px;
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-}
-.card:hover {
-    transform: scale(1.05);
-    border-color: var(--white);
-    box-shadow: 0 0 15px var(--blue);
-}
-.card h3 {
-    margin: 0 0 0.5rem 0;
-    color: var(--blue);
-    font-size: 1.1rem;
-}
-.card p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    line-height: 1.4;
-}
-
-/* 🔹 Footer premium */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: var(--white);
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(4px);
-    z-index: 2;
-}
-footer::before {
-    content: "";
-    display: block;
-    width: 80%;
-    margin: 0 auto 0.5rem auto;
-    border-top: 1px solid rgba(255,255,255,0.2);
-}
-footer span {
-    color: var(--red);
-    font-weight: bold;
-}
-
-/* 🔹 Responsive */
-@media (max-width: 768px) {
-    main {
-        width: 60%;      /* más estrecho */
-        max-width: 70%;  
-        min-width: 55%;
-        background: rgba(0, 15, 40, 0.3);
-    }
-    body {
-        background-size: 90vw; /* logo más visible en móvil */
-    }
-}
-</style>
-
-    </head>
-    <body>
-        <div class="logo-background">
-            <img src="logotipo.png" alt="Resurge">
-        </div>
-
-        <main>
-            <a class="card" href="queesresurge.html">
-                <h3>¿Qué es Resurge?</h3>
-                <p>Descubre nuestra visión y propósito.</p>
-            </a>
-            <a class="card" href="miembros.html">
-                <h3>Miembros</h3>
-                <p>Conoce a nuestra comunidad y sus logros.</p>
-            </a>
-            <a class="card" href="tiposventas.html">
-                <h3>Tipos de Ventas</h3>
-                <p>Opciones de crecimiento adaptadas a tu estilo.</p>
-            </a>
-            <a class="card" href="galeria.html">
-                <h3>Galería</h3>
-                <p>Revive momentos únicos de Resurge.</p>
-            </a>
-        </main>
-
-        <footer>
-            <p><span>Resurge</span> · Donde los sueños Renacen</p>
-        </footer>
-    </body>
-    </html>
-    
+  <footer>
+    <p>© 2025 Resurge · Donde los sueños renacen</p>
+  </footer>
+</body>
+</html>

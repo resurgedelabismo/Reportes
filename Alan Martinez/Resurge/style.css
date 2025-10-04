@@ -1,0 +1,105 @@
+:root {
+  --blue: #1a73e8;
+  --blue-glow: #4dabf7;
+  --dark: #000;
+  --light: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Marca de agua */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background: url("logotipo.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.logo { height: 40px; filter: drop-shadow(0 0 5px var(--blue)); }
+.menu { display: none; flex-direction: column; gap: 1.2rem; }
+.menu a { 
+  color: var(--light); 
+  text-decoration: none; 
+  font-size: 1.2rem; 
+  transition: 0.3s;
+}
+.menu a:hover { color: var(--blue-glow); text-shadow: 0 0 8px var(--blue-glow); }
+.menu-toggle { 
+  background: none; 
+  border: none; 
+  color: var(--light); 
+  font-size: 1.8rem; 
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, rgba(26,115,232,0.8), rgba(0,0,0,0.8));
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 1;
+  position: relative;
+}
+.hero h1 { font-size: 2.3rem; margin: 0; }
+.hero p { font-size: 1.1rem; opacity: 0.9; }
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.7rem;
+  background: var(--blue);
+  color: var(--light);
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(26,115,232,0.6);
+  transition: 0.3s;
+}
+.btn:hover {
+  background: var(--blue-glow);
+  box-shadow: 0 0 16px rgba(77,171,247,0.9);
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.9);
+  color: var(--light);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .menu { display: flex; flex-direction: row; }
+  .menu-toggle { display: none; }
+}
