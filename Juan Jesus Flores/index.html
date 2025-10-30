@@ -1,9 +1,9 @@
 
-    <html lang="es">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Juan Jesus Flores</title>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Juan Jesus Flores</title>
 <style>
 /* ====== BASE GENERAL ====== */
 html, body {
@@ -19,11 +19,10 @@ html, body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
-
-/* Contenido principal ocupa el espacio */
 main {
     flex: 1;
-    will-change: transform; /* ayuda a scroll más suave */
+    will-change: transform;
+    padding: 1rem;
 }
 
 /* ====== HEADER ====== */
@@ -34,6 +33,10 @@ header {
     box-shadow: 0 0 15px rgba(0, 200, 255, 0.25);
     border-radius: 0 0 18px 18px;
     background: rgba(0, 15, 30, 0.92);
+    background-image: repeating-linear-gradient(
+        45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
+        transparent 1px, transparent 2px
+    );
     animation: fadeIn 0.9s ease forwards;
     will-change: opacity, transform;
 }
@@ -77,7 +80,7 @@ nav a {
     border: 1px solid rgba(0, 174, 255, 0.5);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     box-shadow: 0 0 6px rgba(0, 170, 255, 0.3);
 }
 nav a:hover {
@@ -85,6 +88,17 @@ nav a:hover {
     box-shadow: 0 0 12px #00bbff66;
     color: #ffffff;
     transform: translateY(-2px);
+}
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #00eaff;
+    transition: width 0.3s;
+}
+nav a:hover::after {
+    width: 100%;
 }
 
 /* ====== SECTION ====== */
@@ -98,8 +112,7 @@ section {
     border: 1px solid rgba(0, 174, 255, 0.5);
     box-shadow: 0 0 15px rgba(0, 174, 255, 0.2);
     background-image: repeating-linear-gradient(
-        45deg, rgba(255,255,255,0.02) 0px,
-        rgba(255,255,255,0.02) 1px,
+        45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
         transparent 1px, transparent 2px
     );
 }
@@ -129,6 +142,30 @@ section p.lema {
     animation: glowPulse 3s infinite alternate;
 }
 
+/* ====== SUBPERFILES ====== */
+.subperfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1rem;
+}
+.subperfil-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: rgba(0,230,255,0.1);
+    color: #00eaff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.subperfil-link:hover {
+    background: rgba(0,230,255,0.3);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
 /* ====== DIVIDER ====== */
 .divider {
     width: 60%;
@@ -154,54 +191,49 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 @keyframes glowPulse {
-    0%, 100% {
-        text-shadow: 0 0 12px #00eaff, 0 0 22px #005aff, 0 0 30px #00bbffbb;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ffff, 0 0 32px #00bbff, 0 0 40px #00eaffdd;
-    }
+    0%, 100% { text-shadow: 0 0 12px #00eaff, 0 0 22px #005aff, 0 0 30px #00bbffbb; }
+    50% { text-shadow: 0 0 20px #00ffff, 0 0 32px #00bbff, 0 0 40px #00eaffdd; }
 }
 </style>
+</head>
+<body>
 
+<header>
+    <h1>Juan Jesus Flores</h1>
+    <p>Accede rápidamente al perfil de usuario</p>
+</header>
 
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="tickets.html">Tickets</a>
+    <a href="notas.html">Notas</a>
+    <a href="reporte.html">Reporte</a>
+</nav>
 
+<main>
+    <section>
+        <h2>Hola, Juan Jesus Flores.</h2>
+        <p>Muchas gracias por tu <strong>confianza</strong> y <strong>preferencia</strong>.</p>
+        <p>Estamos felices de acompañarte en este viaje.<br>Tu presencia nos inspira a seguir creciendo contigo.</p>
+        <p class="vision">
+            Resurge fue creado para quienes no temen <strong>reinventarse</strong> con tal de romper lo que ya está dado por hecho.<br>
+            Para aquellos que, aun cayendo al abismo, <strong>renacen una y otra vez</strong>, no como eran, sino como deciden ser.<br>
+            Resurge es el lugar donde vuelves a soñar.
+        </p>
+        <p class="lema">✦ Resurge, donde los sueños Renacen ✦</p>
 
+        <div class="divider"></div><div class="subperfil-container"><div class='divider'></div>
+<section>
+<h2>Subperfiles relacionados</h2>
+<p><a href="../Juan Jesus Flores Motoneta/index.html" class="subperfil-link">Juan Jesus Flores Motoneta</a></p>
+</section>
+</div>
+    </section>
+</main>
 
+<footer>
+    <p>© Resurge | Donde los sueños renacen</p>
+</footer>
 
-    </head>
-    <body>
-
-    <header>
-        <h1>Juan Jesus Flores</h1>
-        <p>Accede rápidamente al perfil de usuario</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="tickets.html">Tickets</a>
-        <a href="notas.html">Notas</a>
-        <a href="reporte.html">Reporte</a>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Hola, Juan Jesus Flores.</h2>
-            <p>Muchas gracias por tu <strong>confianza</strong> y <strong>preferencia</strong>.</p>
-            <p>Estamos felices de acompañarte en este viaje.<br>
-            Tu presencia nos inspira a seguir creciendo contigo.</p>
-            <p class="vision">
-                Resurge fue creado para quienes no temen <strong>reinventarse</strong> con tal de romper lo que ya está dado por hecho.<br>
-                Para aquellos que, aun cayendo al abismo, <strong>renacen una y otra vez</strong>, no como eran, sino como deciden ser.<br>
-                Resurge es el lugar donde vuelves a soñar.
-            </p>
-            <p class="lema">✦ Resurge, donde los sueños Renacen ✦</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© Resurge | Donde los sueños renacen</p>
-    </footer>
-
-    </body>
-    </html>
-    
+</body>
+</html>
