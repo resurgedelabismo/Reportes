@@ -3,8 +3,8 @@
         <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reporte de Luis Enrique</title>
-        <style>
+        <title>Tickets de Dilan Celular</title>
+<style>
 /* ====== BASE GENERAL ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -216,11 +216,12 @@ footer {
   }
 }
 </style>
+
         </head>
         <body>
 
         <header>
-            <h1>Luis Enrique</h1>
+            <h1>Dilan Celular</h1>
             <p>Accede rápidamente al perfil de usuario</p>
         </header>
 
@@ -231,83 +232,48 @@ footer {
             <a href="reporte.html">Reporte</a>
         </nav>
 
-        <h2>Reporte General</h2>
+        <h2>Tickets</h2>
         <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
-        <div class="scroll-horizontal" id="carousel">
+        <div class="scroll-horizontal" id="ticketScroll">
         
-            <div class="card">
-                <h3>Número de Ventas</h3>
-                <div class="divider"></div>
-                <p>6</p>
-            </div>
-            
-            <div class="card">
-                <h3>Número de Pagos</h3>
-                <div class="divider"></div>
-                <p>21</p>
-            </div>
-            
-            <div class="card">
-                <h3>Total precios</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 51850.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Total pagado</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 27400.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Restante por Pagar</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 24450.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Primera venta</h3>
-                <div class="divider"></div>
-                <p>2024-12-25</p>
-            </div>
-            
-            <div class="card">
-                <h3>Puntos</h3>
-                <div class="divider"></div>
-                <p>208.34</p>
-            </div>
-            
-            <div class="card">
-                <h3>Membresía</h3>
-                <div class="divider"></div>
-                <p>Plata</p>
-            </div>
+                <div class="card">
+                    <h3>Ticket Dilan Celular-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 17 / Noviembre / 2025</p>
+                    <p><b>Total:</b> $350.00</p>
+                    <p><b>Tipo:</b> Efectivo</p>
+                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                </div>
             
         </div>
 
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
         <footer>
-            <p>© Resurge | Donde los sueños renacen</p>
+            © Resurge | Donde los sueños renacen
         </footer>
 
         <script>
-        const carousel = document.getElementById('carousel');
-        const progress = document.getElementById('progress');
+        const scroll = document.getElementById('ticketScroll');
+        const bar = document.getElementById('progressBar');
         const hint = document.getElementById('scrollHint');
-        carousel.addEventListener('scroll', () => {
-        const scrollLeft = carousel.scrollLeft;
-        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        const scrolled = (scrollLeft / scrollWidth) * 100;
-        progress.style.width = scrolled + '%';
+
+        // Progreso
+        scroll.addEventListener('scroll', () => {
+            const maxScroll = scroll.scrollWidth - scroll.clientWidth;
+            const percent = (scroll.scrollLeft / maxScroll) * 100;
+            bar.style.width = percent + '%';
         });
 
         // Mostrar aviso solo si hay scroll horizontal
         window.addEventListener('load', () => {
-            if (carousel.scrollWidth > carousel.clientWidth) {
+            if (scroll.scrollWidth > scroll.clientWidth) {
                 hint.style.display = 'block';
             }
         });
-
         </script>
 
         </body>

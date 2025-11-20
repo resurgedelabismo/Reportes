@@ -1,10 +1,10 @@
 
-        <html lang="es">
-        <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reporte de Luis Enrique</title>
-        <style>
+            <html lang="es">
+            <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Notas de Dilan Celular</title>
+            <style>
 /* ====== BASE GENERAL ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -216,100 +216,65 @@ footer {
   }
 }
 </style>
-        </head>
-        <body>
+            </head>
+            <body>
 
-        <header>
-            <h1>Luis Enrique</h1>
-            <p>Accede rápidamente al perfil de usuario</p>
-        </header>
+            <header>
+                <h1>Dilan Celular</h1>
+                <p>Accede rápidamente al perfil de usuario</p>
+            </header>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="tickets.html">Tickets</a>
-            <a href="notas.html">Notas</a>
-            <a href="reporte.html">Reporte</a>
-        </nav>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="notas.html">Notas</a>
+                <a href="reporte.html">Reporte</a>
+            </nav>
 
-        <h2>Reporte General</h2>
-        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
-
-        <div class="scroll-horizontal" id="carousel">
-        
-            <div class="card">
-                <h3>Número de Ventas</h3>
-                <div class="divider"></div>
-                <p>6</p>
-            </div>
+            <h2>Notas</h2>
             
-            <div class="card">
-                <h3>Número de Pagos</h3>
-                <div class="divider"></div>
-                <p>21</p>
-            </div>
-            
-            <div class="card">
-                <h3>Total precios</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 51850.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Total pagado</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 27400.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Restante por Pagar</h3>
-                <div class="divider"></div>
-                <p><span class='money'>$ 24450.0</span></p>
-            </div>
-            
-            <div class="card">
-                <h3>Primera venta</h3>
-                <div class="divider"></div>
-                <p>2024-12-25</p>
-            </div>
-            
-            <div class="card">
-                <h3>Puntos</h3>
-                <div class="divider"></div>
-                <p>208.34</p>
-            </div>
-            
-            <div class="card">
-                <h3>Membresía</h3>
-                <div class="divider"></div>
-                <p>Plata</p>
-            </div>
-            
-        </div>
 
-        <footer>
-            <p>© Resurge | Donde los sueños renacen</p>
-        </footer>
+            <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
-        <script>
-        const carousel = document.getElementById('carousel');
-        const progress = document.getElementById('progress');
-        const hint = document.getElementById('scrollHint');
-        carousel.addEventListener('scroll', () => {
-        const scrollLeft = carousel.scrollLeft;
-        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        const scrolled = (scrollLeft / scrollWidth) * 100;
-        progress.style.width = scrolled + '%';
-        });
+            <div class="scroll-horizontal" id="carousel">
+            
+                <div class="card">
+                    <h3>Nota Dilan Celular-001</h3>
+                    <div class="divider"></div>
+                    <p><b>Fecha:</b> 17 / Noviembre / 2025</p>
+                    <p><b>Artículo:</b> Galaxy A56</p>
+                    <p><b>Precio:</b> $9000.00</p>
+                </div>
+            
+                </div>
 
-        // Mostrar aviso solo si hay scroll horizontal
-        window.addEventListener('load', () => {
-            if (carousel.scrollWidth > carousel.clientWidth) {
-                hint.style.display = 'block';
-            }
-        });
+                <footer>
+                    <p>© Resurge | Donde los sueños renacen</p>
+                </footer>
 
-        </script>
+                <script>
+                const carousel = document.getElementById('carousel');
+                const progress = document.getElementById('progress');
+                const hint = document.getElementById('scrollHint');
 
-        </body>
-        </html>
-        
+                // Mostrar/ocultar hint solo si hay scroll horizontal
+                function checkScroll() {
+                    if (carousel.scrollWidth > carousel.clientWidth) {
+                        hint.style.display = 'block';
+                    } else {
+                        hint.style.display = 'none';
+                    }
+                }
+                checkScroll();
+
+                carousel.addEventListener('scroll', () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                    const scrolled = (scrollLeft / scrollWidth) * 100;
+                    progress.style.width = scrolled + '%';
+                });
+                </script>
+
+                </body>
+                </html>
+                
