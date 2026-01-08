@@ -1,10 +1,10 @@
 
-        <html lang="es">
-        <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tickets de Contador Miguel</title>
-<style>
+            <html lang="es">
+            <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Notas de Aldo</title>
+            <style>
 /* ====== BASE GENERAL ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -216,129 +216,65 @@ footer {
   }
 }
 </style>
+            </head>
+            <body>
 
-        </head>
-        <body>
+            <header>
+                <h1>Aldo</h1>
+                <p>Accede rápidamente al perfil de usuario</p>
+            </header>
 
-        <header>
-            <h1>Contador Miguel</h1>
-            <p>Accede rápidamente al perfil de usuario</p>
-        </header>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="notas.html">Notas</a>
+                <a href="reporte.html">Reporte</a>
+            </nav>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="tickets.html">Tickets</a>
-            <a href="notas.html">Notas</a>
-            <a href="reporte.html">Reporte</a>
-        </nav>
+            <h2>Notas</h2>
+            
 
-        <h2>Tickets</h2>
-        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
+            <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
-        <div class="scroll-horizontal" id="ticketScroll">
-        
+            <div class="scroll-horizontal" id="carousel">
+            
                 <div class="card">
-                    <h3>Ticket Contador Miguel-008</h3>
+                    <h3>Nota Aldo-001</h3>
                     <div class="divider"></div>
                     <p><b>Fecha:</b> 6 / Enero / 2026</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
+                    <p><b>Artículo:</b> Prestamo</p>
+                    <p><b>Precio:</b> $3500.00</p>
                 </div>
             
-                <div class="card">
-                    <h3>Ticket Contador Miguel-007</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 18 / Diciembre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
                 </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-006</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 2 / Diciembre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-005</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 26 / Noviembre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-004</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 14 / Noviembre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-003</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 16 / Octubre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-002</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 2 / Octubre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-                <div class="card">
-                    <h3>Ticket Contador Miguel-001</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 17 / Septiembre / 2025</p>
-                    <p><b>Total:</b> $200.00</p>
-                    <p><b>Tipo:</b> Efectivo</p>
-                    <p class="leyenda">Gracias por confiar en Resurge</p>
-                </div>
-            
-        </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
+                <footer>
+                    <p>© Resurge | Donde los sueños renacen</p>
+                </footer>
 
-        <footer>
-            © Resurge | Donde los sueños renacen
-        </footer>
+                <script>
+                const carousel = document.getElementById('carousel');
+                const progress = document.getElementById('progress');
+                const hint = document.getElementById('scrollHint');
 
-        <script>
-        const scroll = document.getElementById('ticketScroll');
-        const bar = document.getElementById('progressBar');
-        const hint = document.getElementById('scrollHint');
+                // Mostrar/ocultar hint solo si hay scroll horizontal
+                function checkScroll() {
+                    if (carousel.scrollWidth > carousel.clientWidth) {
+                        hint.style.display = 'block';
+                    } else {
+                        hint.style.display = 'none';
+                    }
+                }
+                checkScroll();
 
-        // Progreso
-        scroll.addEventListener('scroll', () => {
-            const maxScroll = scroll.scrollWidth - scroll.clientWidth;
-            const percent = (scroll.scrollLeft / maxScroll) * 100;
-            bar.style.width = percent + '%';
-        });
+                carousel.addEventListener('scroll', () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                    const scrolled = (scrollLeft / scrollWidth) * 100;
+                    progress.style.width = scrolled + '%';
+                });
+                </script>
 
-        // Mostrar aviso solo si hay scroll horizontal
-        window.addEventListener('load', () => {
-            if (scroll.scrollWidth > scroll.clientWidth) {
-                hint.style.display = 'block';
-            }
-        });
-        </script>
-
-        </body>
-        </html>
-        
+                </body>
+                </html>
+                
