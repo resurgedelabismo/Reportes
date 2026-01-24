@@ -1,10 +1,10 @@
 
-            <html lang="es">
-            <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Notas de Jesus Sandoval Articulos</title>
-            <style>
+        <html lang="es">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tickets de Miriam Xochitl tenis</title>
+<style>
 /* ====== BASE GENERAL ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -216,65 +216,57 @@ footer {
   }
 }
 </style>
-            </head>
-            <body>
 
-            <header>
-                <h1>Jesus Sandoval Articulos</h1>
-                <p>Accede rápidamente al perfil de usuario</p>
-            </header>
+        </head>
+        <body>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="tickets.html">Tickets</a>
-                <a href="notas.html">Notas</a>
-                <a href="reporte.html">Reporte</a>
-            </nav>
+        <header>
+            <h1>Miriam Xochitl tenis</h1>
+            <p>Accede rápidamente al perfil de usuario</p>
+        </header>
 
-            <h2>Notas</h2>
-            
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="notas.html">Notas</a>
+            <a href="reporte.html">Reporte</a>
+        </nav>
 
-            <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
+        <h2>Tickets</h2>
+        <div class="scroll-hint" id="scrollHint">⬅️ Desliza para ver más ➡️</div>
 
-            <div class="scroll-horizontal" id="carousel">
-            
-                <div class="card">
-                    <h3>Nota Jesus Sandoval Articulos-001</h3>
-                    <div class="divider"></div>
-                    <p><b>Fecha:</b> 25 / Junio / 2025</p>
-                    <p><b>Artículo:</b> Edge 50 Fusion</p>
-                    <p><b>Precio:</b> $6000.00</p>
-                </div>
-            
-                </div>
+        <div class="scroll-horizontal" id="ticketScroll">
+        
+        </div>
 
-                <footer>
-                    <p>© Resurge | Donde los sueños renacen</p>
-                </footer>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
 
-                <script>
-                const carousel = document.getElementById('carousel');
-                const progress = document.getElementById('progress');
-                const hint = document.getElementById('scrollHint');
+        <footer>
+            © Resurge | Donde los sueños renacen
+        </footer>
 
-                // Mostrar/ocultar hint solo si hay scroll horizontal
-                function checkScroll() {
-                    if (carousel.scrollWidth > carousel.clientWidth) {
-                        hint.style.display = 'block';
-                    } else {
-                        hint.style.display = 'none';
-                    }
-                }
-                checkScroll();
+        <script>
+        const scroll = document.getElementById('ticketScroll');
+        const bar = document.getElementById('progressBar');
+        const hint = document.getElementById('scrollHint');
 
-                carousel.addEventListener('scroll', () => {
-                    const scrollLeft = carousel.scrollLeft;
-                    const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-                    const scrolled = (scrollLeft / scrollWidth) * 100;
-                    progress.style.width = scrolled + '%';
-                });
-                </script>
+        // Progreso
+        scroll.addEventListener('scroll', () => {
+            const maxScroll = scroll.scrollWidth - scroll.clientWidth;
+            const percent = (scroll.scrollLeft / maxScroll) * 100;
+            bar.style.width = percent + '%';
+        });
 
-                </body>
-                </html>
-                
+        // Mostrar aviso solo si hay scroll horizontal
+        window.addEventListener('load', () => {
+            if (scroll.scrollWidth > scroll.clientWidth) {
+                hint.style.display = 'block';
+            }
+        });
+        </script>
+
+        </body>
+        </html>
+        
